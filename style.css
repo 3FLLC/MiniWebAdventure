@@ -1,0 +1,124 @@
+BODY {
+   margin:0px;
+   padding:0px;
+   background:#001133;
+   color:#0000A0;
+   font-size:10pt;
+   font-family:sans-serif;
+}
+#gamecontent {
+   background:url(game_scroll.png) no-repeat;
+   position:absolute;
+   top:140px;
+   left:140px;
+   height:271px;
+   width:320px;
+   padding-top:40px;
+   padding-bottom:40px;
+   padding-left:90px;
+   padding-right:90px;
+}
+#gamecontrols {
+   background:#000000;
+   padding:10px;
+   position:absolute;
+   top:500px;
+   left:140px;
+   width:470px;
+   height:30px;
+   -webkit-box-shadow:inset 0px 0px 10px 4px #fa0;
+   -moz-box-shadow:inset 0px 0px 10px 4px #fa0;
+   box-shadow:inset 0px 0px 10px 4px #fa0;
+   border-radius:10px;
+   animation:glow 10s ease-in-out infinite;
+}
+@keyframes glow {
+  0%,100%{ border-radius:0px; }
+  25%{ border-radius:10px; }
+  50%{ border-radius:20px; }
+  75%{ border-radius:30px; }
+}
+#north {
+   display:inline-block;
+   color:#003060;
+   padding:6px;
+   background:url("game_scroll.png") no-repeat;
+   background-position:-130px -30px;
+   border-radius:10px;
+   cursor:pointer;
+   font-weight:bolder;
+   margin-left:56px;
+   animation:glow 10s ease-in-out infinite;
+}
+#south {
+   display:inline-block;
+   color:#003060;
+   padding:6px;
+   background:url("game_scroll.png") no-repeat;
+   background-position:-127px -36px;
+   border-radius:10px;
+   cursor:pointer;
+   font-weight:bolder;
+   margin-left:10px;
+   animation:glow 10s ease-in-out infinite;
+}
+#east {
+   display:inline-block;
+   color:#003060;
+   padding:6px;
+   background:url("game_scroll.png") no-repeat;
+   background-position:-126px -28px;
+   border-radius:10px;
+   cursor:pointer;
+   font-weight:bolder;
+   margin-left:10px;
+   animation:glow 10s ease-in-out infinite;
+}
+#west {
+   display:inline-block;
+   color:#003060;
+   padding:6px;
+   background:url("game_scroll.png") no-repeat;
+   background-position:-302px -300px;
+   border-radius:10px;
+   cursor:pointer;
+   font-weight:bolder;
+   margin-left:10px;
+   animation:glow 10s ease-in-out infinite;
+}
+#up {
+   display:inline-block;
+   color:#003060;
+   padding:6px;
+   background:url("game_scroll.png") no-repeat;
+   background-position:-332px -280px;
+   border-radius:10px;
+   cursor:pointer;
+   font-weight:bolder;
+   margin-left:10px;
+   animation:glow 10s ease-in-out infinite;
+}
+#down {
+   display:inline-block;
+   color:#003060;
+   padding:6px;
+   background:url("game_scroll.png") no-repeat;
+   background-position:-340px -260px;
+   border-radius:10px;
+   cursor:pointer;
+   font-weight:bolder;
+   margin-left:10px;
+   animation:glow 10s ease-in-out infinite;
+}
+#quit {
+   display:inline-block;
+   color:#003060;
+   padding:6px;
+   background:url("game_scroll.png") no-repeat;
+   background-position:-120px -34px;
+   border-radius:10px;
+   cursor:pointer;
+   font-weight:bolder;
+   margin-left:10px;
+   animation:glow 10s ease-in-out infinite;
+}
