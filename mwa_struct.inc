@@ -1,9 +1,24 @@
 {%MainUnit: miniwebadv.p} (* (c) 2015 by 3F, LLC. see LICENSE.TXT *)
+CONST
+   nw   =  9;
+   ne   =  5;
+   sew  = 14;
+   nonly=  1;
+   nsew = 15;
+   newud= 61;
+   sw   = 10;
+   ns   =  3;
+   donly= 32;
+   dn   = 33;
+   ud   = 48;
+   su   = 18;
+
 type
    rooms=(start, grandroom, vestibule, narrow1, lakeshore, island, brink, iceroom,
           ogreroom, narrow2, pit, crystal, batscave, steam, deadend, ladder, maze, flames);
 
    directions=(n, s, e, w, u, d, q);
+   mazerooms=(m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19);
 
    PRequest=^Request;
    Request=Record
@@ -25,6 +40,7 @@ type
       command:STRING[10];
       ch:CHAR;
       location:rooms;
+      mazeloc:mazerooms;
       ogreloc:rooms;
       visited:ARRAY[start..flames] OF BOOLEAN;
       next:directions;
@@ -97,5 +113,58 @@ begin
    else If loc='steam' then Result:=steam
    else If loc='deadend' then Result:=deadend
    else If loc='ladder' then Result:=ladder
+   else If loc='maze' then Result:=maze
    else If loc='flames' then Result:=flames;
+end;
+
+function MazeroomsToString(mazeloc:mazerooms):String;
+begin
+{$IFDEF TRACECODE}Writeln('@MazeroomsToString');{$ENDIF}
+   case mazeloc of
+      m1:Result:='m1';
+      m2:Result:='m2';
+      m3:Result:='m3';
+      m4:Result:='m4';
+      m5:Result:='m5';
+      m6:Result:='m6';
+      m7:Result:='m7';
+      m8:Result:='m8';
+      m9:Result:='m9';
+      m10:Result:='m10';
+      m11:Result:='m11';
+      m12:Result:='m12';
+      m13:Result:='m13';
+      m14:Result:='m14';
+      m15:Result:='m15';
+      m16:Result:='m16';
+      m17:Result:='m17';
+      m18:Result:='m18';
+      m19:Result:='m19';
+   end;
+end;
+
+function StringToMazeRooms(mazeloc:String):mazerooms;
+begin
+{$IFDEF TRACECODE}Writeln('@StringToMazeRooms');{$ENDIF}
+   case mazeloc of
+      'm1':Result:=m1;
+      'm2':Result:=m2;
+      'm3':Result:=m3;
+      'm4':Result:=m4;
+      'm5':Result:=m5;
+      'm6':Result:=m6;
+      'm7':Result:=m7;
+      'm8':Result:=m8;
+      'm9':Result:=m9;
+      'm10':Result:=m10;
+      'm11':Result:=m11;
+      'm12':Result:=m12;
+      'm13':Result:=m13;
+      'm14':Result:=m14;
+      'm15':Result:=m15;
+      'm16':Result:=m16;
+      'm17':Result:=m17;
+      'm18':Result:=m18;
+      'm19':Result:=m19;
+   end;
 end;
