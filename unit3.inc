@@ -1,4 +1,4 @@
-{%MainUnit: miniadv.p}
+{%MainUnit: miniadv.p} (* (c) 2015 by 3F, LLC. see LICENSE.TXT *)
 (* source file unit3.inc *)
 
 (*************************************************************************)
